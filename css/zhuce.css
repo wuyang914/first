@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  width: 80%;
+  height: 59px;
+  margin: 0 auto; }
+  .header img {
+    width: 303px; }
+  .header span {
+    margin-top: 44px;
+    font-size: 12px;
+    color: #999999;
+    float: right; }
+  .header a {
+    color: #336699; }
+
+.zhuye {
+  padding-top: 30px;
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+  background: url(../img/back1.png);
+  font-size: 14px;
+  border: 1px solid #dddddd;
+  line-height: 30px;
+  background-color: rgba(231, 78, 58, 0.692); }
+  .zhuye span {
+    font-size: 12px;
+    color: #636363;
+    margin-left: 89px; }
+  .zhuye input {
+    height: 27px;
+    width: 268px;
+    outline: none; }
+  .zhuye input:last {
+    height: normal; }
+
+.biao, .biao1, .biao2, .biao3, .biao5, .biao6, .biao7 {
+  float: left; }
+
+.biao1, .biao2 {
+  margin-left: 42px; }
+
+.biao3 {
+  margin-left: 14px; }
+
+.biao5, .biao6 {
+  margin-left: 56px; }
+
+.biao7 {
+  margin-left: 29px; }
+
+.login {
+  width: 280px;
+  height: 40px;
+  background-color: #e43f8e;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 84px;
+  margin-top: 45px; }
+  .login a{
+    color: white;
+  }
+.zhuye .check{
+    width: 12px;
+    height: 12px;
+    margin-left:84px;
+}
+.a1{
+  color: #336699;
+}
+.zhuye .text1{
+  width:158px;
+}
+.yanzheng{
+  width: 106px;
+  height: 32px;
+  background-color: #cccccc;
+  text-align: center;
+  display: inline-block;
+ 
+}
+.yanzheng span{
+  color: black;
+  line-height: 32px;
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=zhuce.css.map */

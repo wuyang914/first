@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>三级菜单</title>
+		<link rel="stylesheet" type="text/css" href="../css/navstyle.css"/>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				var _this1=null;
+				$('.nav>li').hover(function(){
+					_this1=$(this);
+					_this1.find('.second-nav').show();
+					var _this2=null;
+					_this1.find('.second-nav').find('li').hover(function(){
+						_this2=$(this);
+						_this2.find('.third-nav').show();
+						_this2.find('.third-nav').hover(function(){
+							$(this).show();
+						},function(){
+							$(this).hide();
+						});
+					},function(){
+						_this2.find('.third-nav').hide();
+					});
+				},function(){
+					_this1.find('.second-nav').hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<ul class="nav">
+				<li><a href="#">首页</a>
+					
+				</li>
+				<li><a href="#">精品商城</a>
+					<ul class="second-nav">
+						<li><a href="#">个护化妆</a>
+						</li>
+						<li><a href="#">生活用品</a>
+						</li>
+						<li><a href="#">其他商城</a>
+						</li>
+						<li><a href="#">百货商品</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">大众商城</a>
+					<ul class="second-nav">
+						<li><a href="#">个护化妆</a>
+						</li>
+						<li><a href="#">生活用品</a>
+						</li>
+						<li><a href="#">其他商城</a>
+						</li>
+						<li><a href="#">百货商品</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">粤购专区</a>
+					<ul class="second-nav">
+						<li><a href="#">日用家访</a></li>
+						<li><a href="#">生活电器</a></li>
+						<li><a href="#">饰品箱包</a></li>
+						<li><a href="#">手机数码</a></li>
+						<li><a href="#">个护化妆</a></li>
+						<li><a href="#">其他类别</a></li>
+					</ul>
+				</li>
+				<li><a href="#">维尔旅行</a>
+				</li>
+				<li><a href="#">维尔特产</a>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+</html>
