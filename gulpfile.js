@@ -1,11 +1,25 @@
-var gulp = require("gulp");
-var uglify = require("gulp-uglify");
-var rename=require("gulp-rename");
+const gulp = require("gulp");
+// const sass=require('gulp-sass');
 
-gulp.task("scripts",function(){
-	gulp.src("gulpfile.js") 
-	.pipe(gulp.sedt("dist/js"))
-	.pipe(uglify())
-	.pipe(rename("gulpfile.min.js"))
-	.pipe(gulp.dest("dist/js"));
-})
+
+gulp.task("copy",async()=>{
+	gulp.src("./**/*").pipe(gulp.dest("D:\\phpStudy\\WWW\\weiershop"));
+});
+
+//监听所有
+// gulp.task("watchall", async ()=>{
+// 	//监听sass
+//     gulp.watch("sass/**/*",async ()=>{
+//         gulp.src("sass/**/*")
+//         .pipe(sass())
+//         .pipe(gulp.dest("D:\\phpStudy\\WWW\\weiershop\\css"))
+// 	})
+	//监听js
+	// gulp.watch("js/*.js",async ()=>{
+	// 	gulp.src("js/*.js")
+	// 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\weiershop\\js"))
+// 	// });
+// })
+
+
+
