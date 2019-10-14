@@ -11,30 +11,53 @@
     <!-- header -->
     <div class="header">
         <img src="../img/zhucelogo.png" alt="">
-        <span>已经有为尔账号了？请 <a href="#">登录</a></span>
+        <span>已经有为尔账号了？请 <a href="denglu.html">登录</a></span>
     </div>
     <div class="zhuye">
-        <div class="biao1">手机号</div><input type="text"><br>
-        <span>输入常用的手机号码</span><br>
-        <div class="biao2">验证码</div><input class="text1" type="text">
-        <img src="../img/zhuce_yanzheng.png" alt="">
-        <br>
-        <span>请输入验证码</span><br>
-        <div class="biao3">手机验证码</div><input class="text1" type="text">
+        <div class="biao1">手机号</div><input id="text1" type="text">
+        <span>输入常用的手机号码</span>
+        <div class="imgb">
+            <div class="biao2">验证码</div>
+            <input class="text1"id="text2" type="text">
+            <img src="../img/zhuce_yanzheng.png" alt="">
+        </div>
+        <span>请输入验证码</span>
+        <div class="biao3">手机验证码</div><input class="text1"id="text3" type="text">
         <div class="yanzheng"><span>发送手机验证码</span></div>
-        <br>
-        <span>请输入验证码</span><br>
-        <div class="biao">介绍人手机号</div><input type="text"><br>
-        <span>完善此项有惊喜</span><br>
-        <div class="biao5">昵称</div><input type="text"><br>
-        <span>请设置您的昵称</span><br>
-        <div class="biao6">密码</div><input type="text"><br>
-        <span>请输入密码</span><br>
-        <div class="biao7">确认密码</div><input type="text"><br>
-        <span>再次确认登录密码</span><br>
+        <span>请输入验证码</span>
+        <div class="biao">介绍人手机号</div><input id="text1" type="text">
+        <span>完善此项有惊喜</span>
+        <div class="biao5">昵称</div><input  type="text">
+        <span>请设置您的昵称</span>
+        <div class="biao6">密码</div><input id="text5" type="text">
+        <span>请输入密码</span>
+        <div class="biao7">确认密码</div><input id="text6" type="text">
+        <span>再次确认登录密码</span>
         <input class="check" type="checkbox" name="tiaokuan">
         我已阅读并接受 <a class="a1" href="#">《为尔服务条款》</a>
         <div class="login"> <a href="#"> 立即注册</a></div>
     </div>
+    <object data="footer.html" type="text/x-scriptlet" width="100%" height="550px"></object>
 </body>
 </html>
+<script>
+    $("text1").onblur=function(){
+        var str=this.value;
+        // 手机号：1开头，共11位
+        var reg=/^1\d{10}$/;
+        if(reg.test(str)==false){
+            this.nextElementSibling.innerHTML="您输入的格式有误";
+        }
+    }
+    $("text5").onblur=function(){
+        var str=this.value;
+        // 验证码
+        var reg=/\w{6,16}$/;
+        if(reg.test(str)==false){
+            this.nextElementSibling.innerHTML="密码长度为6-16";
+        }
+    }
+    function $(id){
+        return document.getElementById(id);
+    }
+</script>

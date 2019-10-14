@@ -51,6 +51,11 @@
 
 .hbox {
   margin-bottom: 30px; }
+  .hbox a {
+    text-decoration: none;
+    color: #b30c0c;
+    font-size: 14px;
+    float: right; }
 
 .phone, .pass {
   width: 310px;
